@@ -1,0 +1,24 @@
+[package]
+name = "jtag_test"
+version = "0.1.0"
+authors = ["Toshifumi NISHINAGA <tnishinaga.dev@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = [
+    "libjtag"
+]
+
+[dependencies]
+libjtag = {path = "./libjtag", features = ["std"]}
+anyhow = "1.0"
+env_logger = "0.9.0"
+log = "0.4.0"
+function_name = "0.2.0"
+spin = "0.9.2"
+fern = "0.6.0"
+chrono = "0.4.19"
+bingen = "0.3.0"
+safe-ftdi = "0.2.2"
